@@ -46,17 +46,8 @@ public:
 		this->timeSet = timeSet;
 	}
 
-	void start() {
-		this->setTimeSet(this->currentMillis());
-		this->setOff(false);
-	}
-
-	bool timedOut() {
-		if (this->isOff()) {
-			return false;
-		}
-		return this->getTimeSet() + this->getTimeOut() < this->currentMillis();
-	}
+	void start();
+	bool timedOut();
 
 	virtual unsigned long currentMillis() = 0;
 };
