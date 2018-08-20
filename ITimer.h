@@ -10,12 +10,15 @@
 
 namespace ranetos {
 
+#include "ISystemClock.h"
+
 class ITimer {
 	unsigned long timeOut;
 	unsigned long timeSet;
 	bool off;
+	ranetos::ISystemClock & systemClock;
 public:
-	ITimer() {
+	ITimer(ranetos::ISystemClock & systemClock): systemClock(systemClock){
 		timeOut = 0;
 		timeSet = 0;
 		off = false;
@@ -48,8 +51,6 @@ public:
 
 	void start();
 	bool timedOut();
-
-	virtual unsigned long currentMillis() = 0;
 };
 
 } /* namespace ranetos */

@@ -10,15 +10,15 @@
 namespace ranetos {
 
 void ITimer::start() {
-	this->setTimeSet(this->currentMillis());
-	this->setOff(false);
+	this->setTimeSet(this->systemClock.milliseconds());
+	off = false;
 }
 
 bool ITimer::timedOut()  {
 	if (this->isOff()) {
 		return false;
 	}
-	return this->getTimeSet() + this->getTimeOut() < this->currentMillis();
+	return this->getTimeSet() + this->getTimeOut() < this->systemClock.milliseconds();
 }
 
 } /* namespace ranetos */
