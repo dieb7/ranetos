@@ -1,20 +1,20 @@
 /*
- * ITimer.cpp
+ * Timer.cpp
  *
  *  Created on: Aug 19, 2018
  *      Author: diebm
  */
 
-#include "ITimer.h"
+#include "Timer.h"
 
 namespace ranetos {
 
-void ITimer::start() {
+void Timer::start() {
 	this->setTimeSet(this->systemClock.milliseconds());
 	off = false;
 }
 
-bool ITimer::timedOut()  {
+bool Timer::timedOut()  {
 	if (this->isOff()) {
 		return false;
 	}

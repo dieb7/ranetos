@@ -1,29 +1,29 @@
 /*
- * ITimer.h
+ * Timer.h
  *
  *  Created on: Aug 19, 2018
  *      Author: diebm
  */
 
-#ifndef ITIMER_H_
-#define ITIMER_H_
+#ifndef TIMER_H_
+#define TIMER_H_
 
 namespace ranetos {
 
 #include "ISystemClock.h"
 
-class ITimer {
+class Timer {
 	unsigned long timeOut;
 	unsigned long timeSet;
 	bool off;
 	ranetos::ISystemClock & systemClock;
 public:
-	ITimer(ranetos::ISystemClock & systemClock): systemClock(systemClock){
+	Timer(ranetos::ISystemClock & systemClock): systemClock(systemClock){
 		timeOut = 0;
 		timeSet = 0;
 		off = false;
 	}
-	virtual ~ITimer() {}
+	virtual ~Timer() {}
 
 	unsigned long getTimeOut() const {
 		return timeOut;
@@ -55,4 +55,4 @@ public:
 
 } /* namespace ranetos */
 
-#endif /* ITIMER_H_ */
+#endif /* TIMER_H_ */
