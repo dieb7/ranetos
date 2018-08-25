@@ -8,9 +8,9 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
-namespace ranetos {
+#include <ISystemClock.h>
 
-#include "ISystemClock.h"
+namespace ranetos {
 
 class Timer {
 	unsigned long timeOut;

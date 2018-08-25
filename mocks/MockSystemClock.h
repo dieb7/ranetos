@@ -12,7 +12,7 @@
 
 namespace ranetos {
 
-class MockSystemClock: public ranetos::ISystemClock {
+class MockSystemClock: public ISystemClock {
 	unsigned long millisecondsValue;
 public:
 	MockSystemClock() {
