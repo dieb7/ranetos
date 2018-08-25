@@ -5,15 +5,15 @@
  *      Author: diebm
  */
 
-#ifndef GPIODEBOUNCER_H_
-#define GPIODEBOUNCER_H_
+#ifndef DEBOUNCEGPIO_H_
+#define DEBOUNCEGPIO_H_
 
 #include <Timer.h>
 #include <IGpio.h>
 
 namespace ranetos {
 
-class GpioDebouncer: public IGpio {
+class DebounceGpio: public IGpio {
 	IGpio & input;
 	Timer & timer;
 	unsigned long delay;
@@ -24,12 +24,12 @@ public:
 		ON_STATE
 	};
 
-	GpioDebouncer(IGpio & input, Timer & timer, unsigned long delay): input(input), timer(timer) {
+	DebounceGpio(IGpio & input, Timer & timer, unsigned long delay): input(input), timer(timer) {
 		this->delay = delay;
 		this->input.setOutput(false);
 		this->currentState = OFF_STATE;
 	}
-	virtual ~GpioDebouncer() {}
+	virtual ~DebounceGpio() {}
 
 	bool isOutput() {
 		return input.isOutput();
@@ -52,4 +52,4 @@ private:
 
 } /* namespace ranetos */
 
-#endif /* GPIODEBOUNCER_H_ */
+#endif /* DEBOUNCEGPIO_H_ */

@@ -5,13 +5,13 @@
  *      Author: diebm
  */
 
-#include "GpioDebouncer.h"
+#include "DebounceGpio.h"
 
 namespace ranetos {
 
 } /* namespace ranetos */
 
-bool ranetos::GpioDebouncer::isOn() {
+bool ranetos::DebounceGpio::isOn() {
 	switch (currentState) {
 	case OFF_STATE:
 		if (input.isOn()) {
