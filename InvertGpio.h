@@ -15,7 +15,7 @@ namespace ranetos {
 class InvertGpio: public IGpio {
 	IGpio & gpio;
 public:
-	InvertGpio(IGpio & gpio): gpio(gpio) {
+	explicit InvertGpio(IGpio & gpio): gpio(gpio) {
 	}
 	virtual ~InvertGpio() {
 	}

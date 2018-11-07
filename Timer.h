@@ -18,7 +18,7 @@ class Timer {
 	bool off;
 	ranetos::ISystemClock & systemClock;
 public:
-	Timer(ranetos::ISystemClock & systemClock): systemClock(systemClock){
+	explicit Timer(ranetos::ISystemClock & systemClock): systemClock(systemClock){
 		timeOut = 0;
 		timeSet = 0;
 		off = false;
