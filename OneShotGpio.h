@@ -21,8 +21,7 @@ public:
 		CHECKED_STATE
 	};
 
-	explicit OneShotGpio(IGpio & gpio): gpio(gpio) {
-		currentState = OFF_STATE;
+	explicit OneShotGpio(IGpio & gpio): gpio(gpio), currentState(OFF_STATE) {
 	}
 	virtual ~OneShotGpio() {}
 
