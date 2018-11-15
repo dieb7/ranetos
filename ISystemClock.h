@@ -5,8 +5,8 @@
  *      Author: diebm
  */
 
-#ifndef ISYSTEMCLOCK_H_
-#define ISYSTEMCLOCK_H_
+#ifndef RANETOS_ISYSTEMCLOCK_H_
+#define RANETOS_ISYSTEMCLOCK_H_
 
 namespace ranetos {
 /**
@@ -25,4 +25,4 @@ public:
 
 } /* namespace ranetos */
 
-#endif /* ISYSTEMCLOCK_H_ */
+#endif /* RANETOS_ISYSTEMCLOCK_H_ */

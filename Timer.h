@@ -8,7 +8,7 @@
 #ifndef RANETOS_TIMER_H_
 #define RANETOS_TIMER_H_
 
-#include <ISystemClock.h>
+#include "ISystemClock.h"
 
 namespace ranetos {
 /**

@@ -5,11 +5,11 @@
  *      Author: diebm
  */
 
-#ifndef DEBOUNCEGPIO_H_
-#define DEBOUNCEGPIO_H_
+#ifndef RANETOS_DEBOUNCEGPIO_H_
+#define RANETOS_DEBOUNCEGPIO_H_
 
-#include <Timer.h>
-#include <IGpio.h>
+#include "Timer.h"
+#include "IGpio.h"
 
 namespace ranetos {
 /**
@@ -56,4 +56,4 @@ private:
 
 } /* namespace ranetos */
 
-#endif /* DEBOUNCEGPIO_H_ */
+#endif /* RANETOS_DEBOUNCEGPIO_H_ */

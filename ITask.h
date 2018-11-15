@@ -5,8 +5,8 @@
  *      Author: diebm
  */
 
-#ifndef ITASK_H_
-#define ITASK_H_
+#ifndef RANETOS_ITASK_H_
+#define RANETOS_ITASK_H_
 
 namespace ranetos {
 
@@ -20,4 +20,4 @@ public:
 
 } /* namespace ranetos */
 
-#endif /* ITASK_H_ */
+#endif /* RANETOS_ITASK_H_ */

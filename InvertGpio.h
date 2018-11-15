@@ -5,10 +5,10 @@
  *      Author: diebm
  */
 
-#ifndef INVERTGPIO_H_
-#define INVERTGPIO_H_
+#ifndef RANETOS_INVERTGPIO_H_
+#define RANETOS_INVERTGPIO_H_
 
-#include <IGpio.h>
+#include "IGpio.h"
 
 namespace ranetos {
 /**
@@ -42,4 +42,4 @@ public:
 
 } /* namespace ranetos */
 
-#endif /* INVERTGPIO_H_ */
+#endif /* RANETOS_INVERTGPIO_H_ */

@@ -5,8 +5,8 @@
  *      Author: diebm
  */
 
-#ifndef ONESHOTGPIO_H_
-#define ONESHOTGPIO_H_
+#ifndef RANETOS_ONESHOTGPIO_H_
+#define RANETOS_ONESHOTGPIO_H_
 
 #include "IGpio.h"
 
@@ -48,4 +48,4 @@ private:
 
 } /* namespace ranetos */
 
-#endif /* ONESHOTGPIO_H_ */
+#endif /* RANETOS_ONESHOTGPIO_H_ */
