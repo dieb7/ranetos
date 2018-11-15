@@ -1,1 +1,4 @@
 *.o
+lib/
+objs/
+ranetos_tests
