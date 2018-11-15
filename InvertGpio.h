@@ -11,11 +11,14 @@
 #include <IGpio.h>
 
 namespace ranetos {
-
+/**
+ * Wraps a IGpio object and inverts it
+ */
 class InvertGpio: public IGpio {
-	IGpio & gpio;
+	IGpio& gpio;
 public:
-	explicit InvertGpio(IGpio & gpio): gpio(gpio) {
+	explicit InvertGpio(IGpio& gpio) :
+	gpio(gpio) {
 	}
 	virtual ~InvertGpio() {
 	}

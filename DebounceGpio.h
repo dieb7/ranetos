@@ -12,24 +12,28 @@
 #include <IGpio.h>
 
 namespace ranetos {
-
+/**
+ * Wraps a unstable IGpio(e.g. mechanical push button) object and with the
+ * help of a timer and a simple state machine gives the value once the IGpio
+ * has stabilized.
+ */
 class DebounceGpio: public IGpio {
-	IGpio & input;
-	Timer & timer;
+	IGpio& input;
+	Timer& timer;
 	unsigned long delay;
 public:
 	enum State {
-		OFF_STATE,
-		DEBOUNCING_STATE,
-		ON_STATE
+		OFF_STATE, DEBOUNCING_STATE, ON_STATE
 	};
 
-	DebounceGpio(IGpio & input, Timer & timer, unsigned long delay): input(input), timer(timer) {
+	DebounceGpio(IGpio& input, Timer& timer, unsigned long delay) :
+			input(input), timer(timer) {
 		this->delay = delay;
 		this->input.setOutput(false);
 		this->currentState = OFF_STATE;
 	}
-	virtual ~DebounceGpio() {}
+	virtual ~DebounceGpio() {
+	}
 
 	bool isOutput() {
 		return input.isOutput();

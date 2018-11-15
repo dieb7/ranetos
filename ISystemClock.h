@@ -9,12 +9,17 @@
 #define ISYSTEMCLOCK_H_
 
 namespace ranetos {
-
+/**
+ * Interface for implementing a milliseconds source.
+ */
 class ISystemClock {
 public:
 	ISystemClock() {}
 	virtual ~ISystemClock() {}
-
+	/**
+	 * Current system milliseconds count.
+	 * @return milliseconds count
+	 */
 	virtual unsigned long milliseconds() = 0;
 };
 

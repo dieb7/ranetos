@@ -11,19 +11,22 @@
 #include "IGpio.h"
 
 namespace ranetos {
-
+/**
+ * Wraps a IGpio object, once it is on and the value checked it will return
+ * false for subsequent check until the wrapped IGpio object changes state.
+ */
 class OneShotGpio: public IGpio {
-	IGpio & gpio;
+	IGpio& gpio;
 public:
 	enum State {
-		OFF_STATE,
-		ON_STATE,
-		CHECKED_STATE
+		OFF_STATE, ON_STATE, CHECKED_STATE
 	};
 
-	explicit OneShotGpio(IGpio & gpio): gpio(gpio), currentState(OFF_STATE) {
+	explicit OneShotGpio(IGpio& gpio) :
+			gpio(gpio), currentState(OFF_STATE) {
 	}
-	virtual ~OneShotGpio() {}
+	virtual ~OneShotGpio() {
+	}
 
 	bool isOutput() {
 		return gpio.isOutput();
